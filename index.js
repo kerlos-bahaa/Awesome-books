@@ -12,22 +12,25 @@ function displayBooks(booksList) {
   booksContainer.innerHTML = '';
   for (let i = 0; i < booksList.length; i += 1) {
     booksContainer.innerHTML += `
-      <h3>${booksList[i].title}</h3>
+      <br>
+      <p>${booksList[i].title}</p>
       <p>${booksList[i].author}</p>
-      <button id="remove${i}" onclick=" removeItem(${i})" >Remove</button>
-      <br>
-      <br>
+      <button id="remove${i}" onclick=" removeItem(${i})" >Remove</button><br/>
+      <hr>
+      <br/>
     `;
   }
 }
 
 function adding(title, author) {
-  books = localBooks(books);
-  books.push({ id: Date.now(), title: title.value, author: author.value });
-  localStorage.setItem('Books', JSON.stringify(books));
-  displayBooks(localBooks(books));
-  title.value = '';
-  author.value = '';
+  if (title.value.length > 1 && author.value.length > 1) {
+    books = localBooks(books);
+    books.push({ id: Date.now(), title: title.value, author: author.value });
+    localStorage.setItem('Books', JSON.stringify(books));
+    displayBooks(localBooks(books));
+    title.value = '';
+    author.value = '';
+  }
 }
 
 function removeItem(items) {
