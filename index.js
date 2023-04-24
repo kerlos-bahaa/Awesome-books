@@ -1,39 +1,44 @@
 let books = [];
+const booksContainer = document.getElementById('books');
+const title = document.getElementById('title');
+const author = document.getElementById('author');
 
-// let add = getElementById("add");
-let div = document.getElementById("books");
-
-let title = document.getElementById("title");
-let author = document.getElementById("author");
-
-function adding(title, author) {
-  books.push({ title: title.value, author: author.value });
-  localStorage.setItem("Books", JSON.stringify(books));
-  let localBooks = JSON.parse(localStorage.getItem("Books"));
-  div.innerHTML = "";
-
-  for (let i = 0; i < localBooks.length; i++) {
-    div.innerHTML += `
-        <h3>${localBooks[i].title}</h3>
-        <p>${localBooks[i].author}</p>
-        <button id="Remove">Remove</button>
-        <br>
-        <br>
-      `;
-  }
-  console.log(localBooks);
+function localBooks(books) {
+  const storage = JSON.parse(localStorage.getItem('Books'));
+  return storage || books;
 }
 
-document.getElementById("add").addEventListener("click", () => {
-  adding(title, author);
-});
-// let Remove = document.getElementById("Remove");
-document.getElementById("Remove").addEventListener("click", () => {
-  let RemoveFunction = JSON.parse(localStorage.getElementById("Books"));
-  console.log(RemoveFunction);
-});
-// add.onclick()=function(){
-//   div.innerHTML = ` <h3>Code and Game</h3>
-//   <p>Safari Hamuli</p>
-//   <button>Remove</button>`;
-// }
+function displayBooks(booksList) {
+  booksContainer.innerHTML = '';
+  for (let i = 0; i < booksList.length; i += 1) {
+    booksContainer.innerHTML += `
+      <h3>${booksList[i].title}</h3>
+      <p>${booksList[i].author}</p>
+      <button id="remove${i}" onclick=" removeItem(${i})" >Remove</button>
+      <br>
+      <br>
+    `;
+  }
+}
+
+function adding(title, author) {
+  books = localBooks(books);
+  books.push({ id: Date.now(), title: title.value, author: author.value });
+  localStorage.setItem('Books', JSON.stringify(books));
+  displayBooks(localBooks(books));
+  title.value = '';
+  author.value = '';
+}
+
+function removeItem(items) {
+  if (items !== undefined) {
+    const localItem = localBooks(books);
+    const removedItem = localItem.filter((item) => item.id !== localItem[items].id);
+    localStorage.setItem('Books', JSON.stringify(removedItem));
+    return displayBooks(localBooks(books));
+  }
+  return displayBooks(localBooks(books));
+}
+
+document.getElementById('add').addEventListener('click', () => { adding(title, author); });
+removeItem();
