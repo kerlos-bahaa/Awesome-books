@@ -26,30 +26,30 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Awesome books] <a name="about-project"></a>
+# 📖 Awesome-books <a name="about-project"></a>
 
-**[Portfolio:]** is a project for new trainees that help them make a professional Awesome books library
+**Awesome-books** this is a website that help family and people to spend time together watching birds and enjoying the wildness
 
-## 🛠 Built With <a name="built-with"></a>
+## 🛠 Built With <a name="built-with"> </a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
-  <summary>Client</summary>
+  <summary>Html</summary>
   <ul>
     <li><a href="https://reactjs.org/">React.js</a></li>
   </ul>
 </details>
 
 <details>
-  <summary>Server</summary>
+  <summary>Css</summary>
   <ul>
     <li><a href="https://expressjs.com/">Express.js</a></li>
   </ul>
 </details>
 
 <details>
-<summary>Database</summary>
+<summary>Javascript</summary>
   <ul>
     <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
   </ul>
@@ -59,18 +59,18 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[Add work section part and about myself part ]**
-- **[process-based management]**
-- **[work Efficiency ]**
+- **[book library]**
+- **[add button]**
+- **[remove button]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- LIVE DEMO -->
 
-<!-- ## 🚀 Live Demo <a name="live-demo"></a> -->
+## 🚀 Live Demo <a name="live-demo"></a>
 
-<!-- - [Live Demo Link](https://kerlos-bahaa.github.io/Portfolio/) -->
+- [Live Demo Link]()
   <br>
-<!-- - <a href="https://www.loom.com/share/92e7b9400ee84eb6a71d8e96fed3c3b6">Loom presentation</a> -->
+- <a href="">Loom presentation</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -164,6 +164,10 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
+👤 ** Safari Hamuli **
+
+- GitHub: [@danielsafari143 ](https://github.com/danielsafari143)
+
 👤 **kerlos-bahaa**
 
 - GitHub: [@githubhandle](https://github.com/kerlos-bahaa)
@@ -194,7 +198,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project...
+If you like this project...you can visit us at GitHub: [@kerlos bahaa](https://github.com/kerlos-bahaa)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -203,6 +207,11 @@ If you like this project...
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I would like to thank...
+
+- To coding partner GitHub: [@danielsafari143 ](https://github.com/danielsafari143)
+
+- Creative Commons license of the design
+- I would like to thanks all my coding partners at Microverse
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
