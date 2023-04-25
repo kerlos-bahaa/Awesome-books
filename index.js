@@ -1,47 +1,56 @@
-let books = [];
-const booksContainer = document.getElementById('books');
-const title = document.getElementById('title');
-const author = document.getElementById('author');
+class awesomeBooks{
+      books;
+      booksContainer ;
+      title;
+      author;
 
-function localBooks(books) {
-  const storage = JSON.parse(localStorage.getItem('Books'));
-  return storage || books;
+      constructor(){
+        this.books = [];
+        this.booksContainer = document.getElementById('books');
+        this.title  = document.getElementById('title');
+        this.author  = document.getElementById('author');
+      }
+
+       localBooks(books) {
+        const storage = JSON.parse(localStorage.getItem('Books'));
+        return storage || books;
+      }
+
+       displayBooks(booksList) {
+        this.booksContainer.innerHTML = '';
+        for (let i = 0; i < booksList.length; i += 1) {
+          this.booksContainer.innerHTML += `
+            <br>
+            <p>${booksList[i].title}</p>
+            <p>${booksList[i].author}</p>
+            <button id="remove${i}" onclick="awesome_books.removeItem(${i})" >Remove</button><br/>
+            <hr>
+            <br/>
+          `;
+        }
+      }
+
+       adding() {
+        if (this.title.value.length > 1 && this.author.value.length > 1) {
+          this.books = this.localBooks(this.books);
+          this.books.push({ id: Date.now(), title: this.title.value, author: this.author.value });
+          localStorage.setItem('Books', JSON.stringify(this.books));
+          this.displayBooks(this.localBooks(this.books));
+          this.title.value = '';
+          this.author.value = '';
+        }
+      }
+
+       removeItem(items) {
+        if (items !== undefined) {
+          const localItem = this.localBooks(this.books);
+          const removedItem = localItem.filter((item) => item.id !== localItem[items].id);
+          localStorage.setItem('Books', JSON.stringify(removedItem));
+          return this.displayBooks(this.localBooks(books));
+        }
+        return this.displayBooks(this.localBooks(books));
+      }
 }
 
-function displayBooks(booksList) {
-  booksContainer.innerHTML = '';
-  for (let i = 0; i < booksList.length; i += 1) {
-    booksContainer.innerHTML += `
-      <br>
-      <p>${booksList[i].title}</p>
-      <p>${booksList[i].author}</p>
-      <button id="remove${i}" onclick=" removeItem(${i})" >Remove</button><br/>
-      <hr>
-      <br/>
-    `;
-  }
-}
 
-function adding(title, author) {
-  if (title.value.length > 1 && author.value.length > 1) {
-    books = localBooks(books);
-    books.push({ id: Date.now(), title: title.value, author: author.value });
-    localStorage.setItem('Books', JSON.stringify(books));
-    displayBooks(localBooks(books));
-    title.value = '';
-    author.value = '';
-  }
-}
 
-function removeItem(items) {
-  if (items !== undefined) {
-    const localItem = localBooks(books);
-    const removedItem = localItem.filter((item) => item.id !== localItem[items].id);
-    localStorage.setItem('Books', JSON.stringify(removedItem));
-    return displayBooks(localBooks(books));
-  }
-  return displayBooks(localBooks(books));
-}
-
-document.getElementById('add').addEventListener('click', () => { adding(title, author); });
-removeItem();
