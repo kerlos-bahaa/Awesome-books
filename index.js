@@ -24,11 +24,9 @@ class awesomeBooks {
     for (let i = 0; i < booksList.length; i += 1) {
       this.booksContainer.innerHTML += `
             <br>
-            <p>${booksList[i].title}</p>
-            <p>${booksList[i].author}</p>
-            <button id="remove${i}" onclick="awesome_books.removeItem(${i})" >Remove</button><br/>
-            <hr>
-            <br/>
+            <div class="main-div">  <p class="pargraph-books">"${booksList[i].title}" by ${booksList[i].author}</p>
+            <div class="buton-books"> <button  id="remove${i}" onclick="awesome_books.removeItem(${i})" >Remove</button><br/></div> 
+            <br/></div>
           `;
     }
   }
