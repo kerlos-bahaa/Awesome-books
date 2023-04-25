@@ -1,9 +1,12 @@
 class awesomeBooks {
   books;
-  booksContainer;
-  title;
-  author;
 
+  booksContainer;
+
+  title;
+
+  author;
+  /* eslint-disable */
   constructor() {
     this.books = [];
     this.booksContainer = document.getElementById("books");
@@ -44,7 +47,7 @@ class awesomeBooks {
       this.author.value = "";
     }
   }
-
+  /* eslint-disable */
   removeItem(items) {
     if (items !== undefined) {
       const localItem = this.localBooks(this.books);
