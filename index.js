@@ -64,3 +64,23 @@ awesome_books.removeItem();
 document.getElementById("add").addEventListener("click", () => {
   awesome_books.adding();
 });
+
+document.getElementById('bookInput').style.display='none';
+document.getElementById('contactInfo').style.display='none';
+
+document.getElementById('listLink').addEventListener('click' , () => {
+  document.getElementById('bookInput').style.display='none';
+  document.getElementById('contactInfo').style.display='none';
+  document.getElementById('bookList').style.display='block';
+})
+
+document.getElementById('inputLink').addEventListener('click' , () => {
+  document.getElementById('bookList').style.display='none';
+  document.getElementById('contactInfo').style.display='none';
+  document.getElementById('bookInput').style.display='block';
+})
+document.getElementById('contactLink').addEventListener('click' , () => {
+  document.getElementById('bookInput').style.display='none';
+  document.getElementById('bookList').style.display='none';
+  document.getElementById('contactInfo').style.display='block';
+})

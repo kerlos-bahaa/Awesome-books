@@ -133,3 +133,15 @@ footer {
   margin-top: 316px;
   padding-left: 15px;
 }
+
+#bookInput {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+}
