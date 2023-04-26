@@ -62,17 +62,10 @@
 - **[book library]**
 - **[add button]**
 - **[remove button]**
-
+- **[Add header ]**
+- **[Add footer and cotact section ]**
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [Live Demo Link]()
-  <br>
-- <a href="">Loom presentation</a>
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
