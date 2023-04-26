@@ -10,7 +10,34 @@ body {
   padding-top: 100px;
   justify-content: center;
 }
-
+/* navgation  */
+header {
+  display: flex;
+  margin-top: -80px;
+  margin-bottom: 30px;
+  width: 90%;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid black;
+}
+.logo {
+  padding-left: 20px;
+  font-weight: bolder;
+  color: red;
+}
+nav {
+  display: flex;
+  gap: 20px;
+  padding-right: 30px;
+}
+nav a {
+  text-decoration: none;
+  border: 1px solid;
+  border-color: transparent transparent transparent black;
+  padding-left: 10px;
+  color: blue;
+}
+/* main  */
 .main {
   display: flex;
   flex-direction: column;
@@ -75,4 +102,34 @@ hr {
   padding: 3px;
   color: white;
   font-weight: bold;
+}
+/* section */
+section {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.h1-contact {
+  padding: 35px;
+}
+.container p {
+  padding-bottom: 20px;
+}
+.ul-div {
+  padding-left: 45px;
+}
+/* copyright */
+footer {
+  width: 98%;
+  display: flex;
+  justify-content: center;
+}
+.copyright {
+  display: flex;
+  height: 100%;
+  width: 90%;
+  border: 2px solid black;
+  margin-top: 316px;
+  padding-left: 15px;
 }
