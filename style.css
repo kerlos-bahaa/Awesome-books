@@ -156,3 +156,10 @@ footer {
   text-align: center;
   margin-top: 40px;
 }
+
+#timer {
+  display: flex;
+  width: 100%;
+  padding-right: 120px;
+  justify-content: flex-end;
+}

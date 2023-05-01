@@ -90,6 +90,8 @@ A working connection and a coding editor like visual studio code
 ### Setup
 
 Clone this repository to your desired folder:
+Cd folder
+Git clone (https://github.com/kerlos-bahaa/Awesome-books.git)
 
 <!--
 Example commands:
